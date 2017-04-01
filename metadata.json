@@ -1,0 +1,14 @@
+{
+  "name": "tomcooperca/puppet_master_setup",
+  "version": "0.1.0",
+  "author": "tomcooperca",
+  "summary": "Puppet module to setup monolithic PE masters and compile masters",
+  "license": "Apache-2.0",
+  "source": "https://github.com/tomcooperca/puppet_master_setup",
+  "project_page": "https://github.com/tomcooperca/puppet_master_setup",
+  "issues_url": "https://github.com/tomcooperca/puppet_master_setup/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
