@@ -1,0 +1,7 @@
+<%- | String $filename,
+      String $factfilter
+| -%>
+#!/bin/bash
+date_time=`date +%Y%m%d_%H_%M`
+mco inventory -F <%= $factfilter %> --script <%= $filename %> > ~/<%= $facts[hostname] %>_<%= $filename %>_$(echo $date_time).csv 2>&1
+scp -q -i ~/.ssh/id_rsa ~/<%= $facts[hostname] %>_<%= $filename %>_$(echo $date_time).csv mywebserver.example.com:/var/www/puppet/reports/<%= $facts[hostname] %>_<%= $filename %>_$(echo $date_time).csv
